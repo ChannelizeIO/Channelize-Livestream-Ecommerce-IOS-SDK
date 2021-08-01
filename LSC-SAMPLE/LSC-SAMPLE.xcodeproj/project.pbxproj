@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		EB2AB71926B6F9C70017104E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2AB71726B6F9C70017104E /* Main.storyboard */; };
 		EB2AB71B26B6F9C80017104E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2AB71A26B6F9C80017104E /* Assets.xcassets */; };
 		EB2AB71E26B6F9C80017104E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2AB71C26B6F9C80017104E /* LaunchScreen.storyboard */; };
+		EB2AB72726B70D680017104E /* LBLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB2AB72926B70D680017104E /* LBLocalizable.strings */; };
+		EB2AB72B26B70E530017104E /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AB72A26B70E530017104E /* KeyCenter.swift */; };
 		F07A97A61142377A692F9ABB /* Pods_LSC_SAMPLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C69D9447F213FA547EE6E0 /* Pods_LSC_SAMPLE.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		EB2AB71A26B6F9C80017104E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB2AB71D26B6F9C80017104E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB2AB71F26B6F9C80017104E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB2AB72826B70D680017104E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LBLocalizable.strings; sourceTree = "<group>"; };
+		EB2AB72A26B70E530017104E /* KeyCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				A92484B6D114A5FBBABCAC57 /* Pods-LSC-SAMPLE.debug.xcconfig */,
 				AF9E3149FD6700210FB44D83 /* Pods-LSC-SAMPLE.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +91,8 @@
 				EB2AB71A26B6F9C80017104E /* Assets.xcassets */,
 				EB2AB71C26B6F9C80017104E /* LaunchScreen.storyboard */,
 				EB2AB71F26B6F9C80017104E /* Info.plist */,
+				EB2AB72926B70D680017104E /* LBLocalizable.strings */,
+				EB2AB72A26B70E530017104E /* KeyCenter.swift */,
 			);
 			path = "LSC-SAMPLE";
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 				EB2AB70A26B6F9C70017104E /* Sources */,
 				EB2AB70B26B6F9C70017104E /* Frameworks */,
 				EB2AB70C26B6F9C70017104E /* Resources */,
+				ADDA58923D0A15E15C7E1758 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2AB71E26B6F9C80017104E /* LaunchScreen.storyboard in Resources */,
+				EB2AB72726B70D680017104E /* LBLocalizable.strings in Resources */,
 				EB2AB71B26B6F9C80017104E /* Assets.xcassets in Resources */,
 				EB2AB71926B6F9C70017104E /* Main.storyboard in Resources */,
 			);
@@ -181,6 +188,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ADDA58923D0A15E15C7E1758 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LSC-SAMPLE/Pods-LSC-SAMPLE-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LSC-SAMPLE/Pods-LSC-SAMPLE-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LSC-SAMPLE/Pods-LSC-SAMPLE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2AB72B26B70E530017104E /* KeyCenter.swift in Sources */,
 				EB2AB71626B6F9C70017104E /* ViewController.swift in Sources */,
 				EB2AB71226B6F9C70017104E /* AppDelegate.swift in Sources */,
 				EB2AB71426B6F9C70017104E /* SceneDelegate.swift in Sources */,
@@ -211,6 +236,14 @@
 				EB2AB71D26B6F9C80017104E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EB2AB72926B70D680017104E /* LBLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB2AB72826B70D680017104E /* en */,
+			);
+			name = LBLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
