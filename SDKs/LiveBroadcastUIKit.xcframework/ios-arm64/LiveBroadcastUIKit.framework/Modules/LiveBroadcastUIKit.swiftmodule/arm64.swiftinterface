@@ -1,0 +1,188 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name LiveBroadcastUIKit
+import AVFoundation
+import AVKit
+import AgoraRtcKit
+import EventKit
+import EventKitUI
+import Foundation
+import LiveBroadcastSDK
+@_exported import LiveBroadcastUIKit
+import MaterialComponents
+import MaterialComponents.MaterialSlider
+import SDWebImage
+import SafariServices
+import Swift
+import UIKit
+public protocol LiveBroadcastUIDelegate {
+  func didRequestToLoginToChatInBroadcast()
+  func didRequestToLoginToWatchBraodcast()
+}
+public enum LiveBroadcastUINotification : Swift.String {
+  case lb_product_tapped
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class LiveBroadcastUI : ObjectiveC.NSObject {
+  public static var instance: LiveBroadcastUIKit.LiveBroadcastUI
+  public static var reactions: [Swift.String : UIKit.UIImage]
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum BordersViewTag : Swift.Int {
+  case right
+  case left
+  case top
+  case bottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class LBBroadcastScreenViewController : UIKit.UIViewController {
+  public var broadcastId: Swift.String
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LBBroadcastScreenViewController : LiveBroadcastSDK.LiveBroadcastDelegate {
+  public func didBroadcastStarted(update: LiveBroadcastSDK.LBBroadcastLiveUpdate)
+  public func didBroadcastCompleted(update: LiveBroadcastSDK.LBBroadcastCompletedUpdate)
+}
+@objc @_inheritsConvenienceInitializers public class LBBroadcastsViewController : UIKit.UIViewController {
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LBBroadcastsViewController : LiveBroadcastSDK.LiveBroadcastDelegate {
+  public func didBroadcastStarted(update: LiveBroadcastSDK.LBBroadcastLiveUpdate)
+  public func didBroadcastCompleted(update: LiveBroadcastSDK.LBBroadcastCompletedUpdate)
+}
+@_hasMissingDesignatedInitializers public class LBColor {
+  public static var backgroundColor: UIKit.UIColor
+  public static var cardBackgroundColor: UIKit.UIColor
+  public static var shadowColor: UIKit.UIColor
+  public static var primaryTextColor: UIKit.UIColor
+  public static var secondaryTextColor: UIKit.UIColor
+  public static var accentColor: UIKit.UIColor
+  public static var seperatorColor: UIKit.UIColor
+  public static var systemGray5: UIKit.UIColor
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LBFont2 {
+  public static var normalSizeRegularFont: UIKit.UIFont?
+  public static var mediumSizeRegularFont: UIKit.UIFont?
+  public static var largeSizeSemiboldFont: UIKit.UIFont?
+  public static var normalSizeSemiBoldFont: UIKit.UIFont?
+  public static var mediumSizeSemiBoldFont: UIKit.UIFont?
+  public static var normalSizeBoldFont: UIKit.UIFont?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LBFont {
+  public static var normalSizeRegularFont: UIKit.UIFont
+  public static var mediumSizeRegularFont: UIKit.UIFont
+  public static var largeSizeSemiboldFont: UIKit.UIFont
+  public static var normalSizeSemiBoldFont: UIKit.UIFont
+  public static var mediumSizeSemiBoldFont: UIKit.UIFont
+  public static var normalSizeBoldFont: UIKit.UIFont
+  @objc deinit
+}
+extension UIView {
+  @discardableResult
+  public func setBackgroundColor(_ color: UIKit.UIColor) -> Self
+  @discardableResult
+  public func setTintColor(_ color: UIKit.UIColor) -> Self
+  @discardableResult
+  public func setLayerMaskToBound(_ isBound: Swift.Bool) -> Self
+  @discardableResult
+  public func setLayerCornerRadius(_ radius: CoreGraphics.CGFloat) -> Self
+  @discardableResult
+  public func setBorderLayerColor(_ color: UIKit.UIColor) -> Self
+  @discardableResult
+  public func setBorderLayerWidth(_ width: CoreGraphics.CGFloat) -> Self
+  @discardableResult
+  public func setContentMode(_ contentMode: UIKit.UIView.ContentMode) -> Self
+}
+extension UIScrollView {
+  @discardableResult
+  public func setIsScrollEnabled(_ isEnabled: Swift.Bool) -> Self
+  @discardableResult
+  public func setContentInset(_ insets: UIKit.UIEdgeInsets) -> Self
+}
+extension UITextView {
+  @discardableResult
+  public func setTextContainerInset(insets: UIKit.UIEdgeInsets) -> Self
+  @discardableResult
+  public func setTextContainerLineFragmentPadding(_ padding: CoreGraphics.CGFloat) -> Self
+  @discardableResult
+  public func setIsEditable(_ isEditable: Swift.Bool) -> Self
+  @discardableResult
+  public func setisSelectable(_ isSelectable: Swift.Bool) -> Self
+  @discardableResult
+  public func setTextColor(_ color: UIKit.UIColor) -> Self
+  @discardableResult
+  public func setFont(_ font: UIKit.UIFont) -> Self
+}
+extension UIImageView {
+  @discardableResult
+  public func setImage(_ image: UIKit.UIImage?) -> Self
+}
+extension UITableView {
+  @discardableResult
+  public func setSeperatorStyle(_ style: UIKit.UITableViewCell.SeparatorStyle) -> Self
+  @discardableResult
+  public func setFooterView(_ view: UIKit.UIView?) -> Self
+  @discardableResult
+  public func setDelegate(_ delegate: UIKit.UITableViewDelegate) -> Self
+  @discardableResult
+  public func setDataSource(_ dataSource: UIKit.UITableViewDataSource) -> Self
+  @discardableResult
+  public func registerCell(_ cellClass: Swift.AnyClass?, identifier: Swift.String) -> Self
+}
+extension UILabel {
+  @discardableResult
+  public func setFont(_ font: UIKit.UIFont) -> Self
+  @discardableResult
+  public func setTitleColor(_ color: UIKit.UIColor) -> Self
+  @discardableResult
+  public func setTextAlignMent(_ alignment: UIKit.NSTextAlignment) -> Self
+  @discardableResult
+  public func setNumberOfLine(_ count: Swift.Int) -> Self
+  @discardableResult
+  public func setText(_ text: Swift.String?) -> Self
+}
+extension UIButton {
+  @discardableResult
+  public func setFont(_ font: UIKit.UIFont) -> UIKit.UIButton
+  @discardableResult
+  public func setImageEdgeInsets(_ insets: UIKit.UIEdgeInsets) -> UIKit.UIButton
+  @discardableResult
+  public func setContentEdgeInsets(_ insets: UIKit.UIEdgeInsets) -> UIKit.UIButton
+  @discardableResult
+  public func setTitleEdgeInsets(_ insets: UIKit.UIEdgeInsets) -> UIKit.UIButton
+  @discardableResult
+  public func updateTitle(_ title: Swift.String?, for state: UIKit.UIControl.State = .normal) -> UIKit.UIButton
+  @discardableResult
+  public func updateImage(_ image: UIKit.UIImage?, for state: UIKit.UIControl.State = .normal) -> UIKit.UIButton
+  @discardableResult
+  public func updateTitleColor(_ color: UIKit.UIColor, for state: UIKit.UIControl.State = .normal) -> UIKit.UIButton
+}
+extension UIStackView {
+  @discardableResult
+  public func setAxis(_ axis: UIKit.NSLayoutConstraint.Axis) -> UIKit.UIStackView
+  @discardableResult
+  public func setDistributionMode(_ mode: UIKit.UIStackView.Distribution) -> UIKit.UIStackView
+  @discardableResult
+  public func setAlignmentMode(_ mode: UIKit.UIStackView.Alignment) -> UIKit.UIStackView
+  @discardableResult
+  public func setSpacing(_ spacing: CoreGraphics.CGFloat) -> UIKit.UIStackView
+}
