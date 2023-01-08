@@ -1,5 +1,4 @@
-// swift-tools-version: 5.7
-
+// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(
@@ -13,6 +12,7 @@ let package = Package(
             targets: ["LiveBroadcastAPI", "LiveBroadcastUI"]),
     ],
     dependencies: [
+        // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/aws-amplify/aws-sdk-ios-spm.git", from: "2.29.1"),
         .package(url: "https://github.com/StyleShare/HLSCachingReverseProxyServer.git", from: "0.1.0"),
         .package(url: "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git", from: "4.1.0"),
@@ -22,12 +22,10 @@ let package = Package(
         .binaryTarget(
             name: "LiveBroadcastAPI",
             url: "https://raw.githubusercontent.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/framework_source/LiveBroadcastAPI.xcframework.zip",
-            checksum: "5407b74f7919b3859dbe6028534ae6a8b2b6a33790a20455bb50460a124881d2",
-            dependencies: ["AgoraRtcEngine_iOS", "AWSMobileClient", "AWSIoT"]),
+            checksum: "5407b74f7919b3859dbe6028534ae6a8b2b6a33790a20455bb50460a124881d2"),
         .binaryTarget(
             name: "LiveBroadcastUI",
             url: "https://raw.githubusercontent.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/framework_source/LiveBroadcastUI.xcframework.zip",
-            checksum: "743bc40646b52568a329da7c8d243f1774f95470ff4e4bd89d4826cea5a1b495",
-            dependencies: ["SDWebImage", "HLSCachingReverseProxyServer"]),
+            checksum: "743bc40646b52568a329da7c8d243f1774f95470ff4e4bd89d4826cea5a1b495")
     ]
 )
