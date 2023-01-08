@@ -1,4 +1,4 @@
-// swift-tools-version: 5.4
+// swift-tools-version: 5.7
 
 import PackageDescription
 
@@ -13,7 +13,6 @@ let package = Package(
             targets: ["LiveBroadcastAPI", "LiveBroadcastUI"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/aws-amplify/aws-sdk-ios-spm.git", from: "2.29.1"),
         .package(url: "https://github.com/StyleShare/HLSCachingReverseProxyServer.git", from: "0.1.0"),
         .package(url: "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git", from: "4.1.0"),
