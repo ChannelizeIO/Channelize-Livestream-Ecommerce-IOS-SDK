@@ -33,12 +33,12 @@ let package = Package(
         ),
         .binaryTarget(
             name: "LiveBroadcastAPI",
-            url: "https://raw.githubusercontent.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/framework_source/LiveBroadcastAPI.xcframework.zip",
+            url: "https://github.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/releases/download/2.0.1/LiveBroadcastAPI.xcframework.zip",
             checksum: "a04ffe38920698c411cdff119e82240b90b1aae12f93e076f9dc1337103b66db"
         ),
         .binaryTarget(
             name: "LiveBroadcastUI",
-            url: "https://raw.githubusercontent.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/framework_source/LiveBroadcastUI.xcframework.zip",
+            url: "https://github.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/releases/download/2.0.1/LiveBroadcastUI.xcframework.zip",
             checksum: "6e4f93f0310357f05a0f0d03c594542ec730bd068641428119624151826b8141"
         ),
     ]
