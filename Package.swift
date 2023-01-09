@@ -21,7 +21,6 @@ let package = Package(
         .target(
             name: "Wrapper",
             dependencies: [
-                "AgoraRtcKit",
                 "LiveBroadcastAPI",
                 "LiveBroadcastUI",
                 .product(name: "AWSMobileClient", package: "AWSiOSSDKV2"),
