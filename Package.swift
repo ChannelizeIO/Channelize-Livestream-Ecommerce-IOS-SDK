@@ -9,27 +9,14 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-        .library( name: "ChannelizeLSC", targets: ["LiveBroadcastAPI", "LiveBroadcastUI", "Wrapper"]),
+        .library( name: "ChannelizeLSC", targets: ["LiveBroadcastAPI", "LiveBroadcastUI"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(name: "AWSiOSSDKV2", url: "https://github.com/aws-amplify/aws-sdk-ios-spm.git", from: "2.29.1"),
         .package(name: "AgoraRtcKit", url: "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git", from: "4.1.0"),
         .package(name: "SDWebImage", url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.13.4")
     ],
     targets: [
-        .target(
-            name: "Wrapper",
-            dependencies: [
-                "LiveBroadcastAPI",
-                "LiveBroadcastUI",
-                .product(name: "AWSMobileClient", package: "AWSiOSSDKV2"),
-                .product(name: "AWSIoT", package: "AWSiOSSDKV2"),
-                .product(name: "SDWebImage", package: "SDWebImage"),
-            ],
-            path: "Wrapper",
-            sources: ["Core"]
-        ),
         .binaryTarget(
             name: "LiveBroadcastAPI",
             url: "https://github.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/releases/download/2.0.1/LiveBroadcastAPI.xcframework.zip",
