@@ -13,30 +13,25 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "SDWebImage", url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.13.4"),
         .package(name: "AgoraRtcKit", url: "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git", from: "4.1.0"),
         .package(name: "AWSiOSSDKV2", url: "https://github.com/aws-amplify/aws-sdk-ios-spm.git", from: "2.29.1"),
     ],
     targets: [
         .binaryTarget(
             name: "LiveBroadcastAPI",
-            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastAPI.xcframework.zip?alt=media&token=89959ca2-b420-4750-b6da-37d2846d0160",
-            checksum: "7635599b5b8fe69a8c49d6ad3a7e6bee465086686b0e60431216ecd303294c5d"
+            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastAPI.xcframework.zip?alt=media&token=470ab40c-f191-4d3f-851c-2838e97c8369",
+            checksum: "6ad6f1f1c5388557bd72f1690294ea5a4bdfb6aa412b6648ec02d39fad2702e3"
         ),
         .binaryTarget(
             name: "LiveBroadcastUI",
-            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastUI.xcframework.zip?alt=media&token=01a1d8f7-a70b-46a0-ba05-74a7fb416fa7",
-            checksum: "fe2b8886dc657d6c9c68ce90b0a0308324b344092cfd76eecbc8286aa198c971"
+            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastUI.xcframework.zip?alt=media&token=12a3f0e8-291b-4f8c-9b51-68bb30fc115c",
+            checksum: "2bae1a4e1b0fa95f3bf04789a10567bd318f831b63594cc233fd0a9ca918f6bc"
         ),
         .target(
             name: "ChannelizeLSCSDK",
             dependencies: [
                 .target(name: "LiveBroadcastAPI"),
                 .target(name: "LiveBroadcastUI"),
-                .product(name: "SDWebImage", package: "SDWebImage"),
-                .product(name: "RtcBasic", package: "AgoraRtcKit"),
-                .product(name: "VQA", package: "AgoraRtcKit"),
-                .product(name: "SuperResolution", package: "AgoraRtcKit"),
                 .product(name: "AWSIoT", package: "AWSiOSSDKV2"),
                 .product(name: "AWSCore", package: "AWSiOSSDKV2"),
             ],
