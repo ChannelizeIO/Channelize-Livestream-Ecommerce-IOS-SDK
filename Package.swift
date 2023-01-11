@@ -13,19 +13,20 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(name: "Kingfisher", url: "https://github.com/onevcat/Kingfisher.git", from: "7.5.0"),
         .package(name: "AgoraRtcKit", url: "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git", from: "4.1.0"),
         .package(name: "AWSiOSSDKV2", url: "https://github.com/aws-amplify/aws-sdk-ios-spm.git", from: "2.29.1"),
     ],
     targets: [
         .binaryTarget(
             name: "LiveBroadcastAPI",
-            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastAPI.xcframework.zip?alt=media&token=470ab40c-f191-4d3f-851c-2838e97c8369",
-            checksum: "6ad6f1f1c5388557bd72f1690294ea5a4bdfb6aa412b6648ec02d39fad2702e3"
+            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastAPI.xcframework.zip?alt=media&token=42c9676f-d20e-4dbd-82e0-4f8ab91dbb51",
+            checksum: "e72d1520d6e9286c54de90bb7810aae65c5f043ff74d275a9fa28f049667ca79"
         ),
         .binaryTarget(
             name: "LiveBroadcastUI",
-            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastUI.xcframework.zip?alt=media&token=12a3f0e8-291b-4f8c-9b51-68bb30fc115c",
-            checksum: "2bae1a4e1b0fa95f3bf04789a10567bd318f831b63594cc233fd0a9ca918f6bc"
+            url: "https://firebasestorage.googleapis.com/v0/b/chatapplication-bceea.appspot.com/o/LiveBroadcastUI.xcframework.zip?alt=media&token=8c531de1-6679-4f55-ae99-78bff0a62945",
+            checksum: "30ab720242bf722068874d40a2fce3f9e6e66f31621f2551c79ccbc269685570"
         ),
         .target(
             name: "ChannelizeLSCSDK",
@@ -39,6 +40,7 @@ let package = Package(
                 .product(name: "ClearVision", package: "AgoraRtcKit"),
                 .product(name: "AIAEC", package: "AgoraRtcKit"),
                 .product(name: "DRM", package: "AgoraRtcKit"),
+                .product(name: "Kingfisher", package: "Kingfisher"),
             ],
             path: "Framework/Dependency",
             exclude: []
