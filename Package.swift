@@ -34,6 +34,11 @@ let package = Package(
                 .target(name: "LiveBroadcastUI"),
                 .product(name: "AWSIoT", package: "AWSiOSSDKV2"),
                 .product(name: "AWSCore", package: "AWSiOSSDKV2"),
+                .product(name: "RtcBasic", package: "AgoraRtcKit"),
+                .product(name: "VQA", package: "AgoraRtcKit"),
+                .product(name: "ClearVision", package: "AgoraRtcKit"),
+                .product(name: "AIAEC", package: "AgoraRtcKit"),
+                .product(name: "DRM", package: "AgoraRtcKit"),
             ],
             path: "Framework/Dependency",
             exclude: []
