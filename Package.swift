@@ -18,13 +18,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "LiveBroadcastAPI",
-            url: "https://github.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/releases/download/v1.3.0/LiveBroadcastAPI.xcframework.zip",
-            checksum: "ea59e4c062311a85286f71a18d450b015404b2a52c13e33cbbade1832e816808"
+            url: "https://github.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/releases/download/v1.3.1/LiveBroadcastAPI.xcframework.zip",
+            checksum: "afb07d89f04585275bf684714f789dd987794d72feaddf487c6ebcdc569f211d"
         ),
         .binaryTarget(
             name: "LiveBroadcastUI",
-            url: "https://github.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/releases/download/v1.3.0/LiveBroadcastUI.xcframework.zip",
-            checksum: "db680ee5d3f336ee54ef84fafe3ecc80532e3f1aa6fa623fb9dce0072f089e18"
+            url: "https://github.com/ChannelizeIO/Channelize-Livestream-Ecommerce-IOS-SDK/releases/download/v1.3.1/LiveBroadcastUI.xcframework.zip",
+            checksum: "1133f77f5f120bfdf45709496ee95e2d005eff005a39b32cb1d76fadc8bfa79d"
         ),
         .binaryTarget(
             name: "AgoraAiEchoCancellationExtension",
